@@ -7,13 +7,8 @@ from keyboard.keyboard_builder import make_row_inline_keyboards
 
 from database.crud import CrudCategory
 
-from utils.filters import IsAdminFilter
-
 
 router = Router()
-router.message.filter(IsAdminFilter())
-router.callback_query.filter(IsAdminFilter())
-
 db_category = CrudCategory()
 
 
